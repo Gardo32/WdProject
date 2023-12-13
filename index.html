@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Party Time</title>
+    <script type="module" src="https://md-block.verou.me/md-block.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,100&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--GOOGLE FONTS-->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Play&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Hedvig+Letters+Serif:opsz@12..24&family=Roboto:wght@100;300;500&display=swap" rel="stylesheet">
+</head>
+<body>
+<header>
+    <h1 id="link1" class="hlink"><a href="#ttilte">Why our clients trust us</a></h1>
+    <h1 id="link2" class="hlink"><a href="#service">Our Services</a></h1>
+    <img class="logo" src="Test-Logo-Circle-black-transparent.png" alt="logo">
+    <h1 id="link3" id="link1" class="hlink"><a href="#Packs">Our Packages</a></h1>
+    <h1 id="link4" class="hlink"><a href="#custom">Our Custom Packages</a></h1>
+</header>
+<section>
+<md-block class="onpic">
+    # **Welcome to Party Time!**
+    Discover the magic at Party Time, where every celebration is extraordinary. From themed 
+    events to marquee parties, our seamless design and easy navigation make planning effortless. 
+    Unleash the joy and create unforgettable moments. Your extraordinary celebration begins here! 🎉
+</md-block>
+<div class="slideshow-container">
+    <div class="slide show">
+        <img src="s.jpg" alt="Slide 1">
+        <div class="overlay"></div>
+    </div>
+    <div class="slide">
+        <img src="s.webp" alt="Slide 2">
+        <div class="overlay"></div>
+    </div>
+    <div class="slide">
+        <img src="re.jfif" alt="Slide 3">
+        <div class="overlay"></div>
+    </div>
+    <div class="slide">
+        <img src="ff.webp" alt="Slide 3">
+        <div class="overlay"></div>
+    </div>
+</div>
+
+<script>
+    let slideIndex = 0;
+
+    function showSlides() {
+        let i;
+        const slides = document.getElementsByClassName("slide");
+
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+
+        slideIndex++;
+
+        if (slideIndex > slides.length) {
+            slideIndex = 1;
+        }
+
+        slides[slideIndex - 1].style.display = "block";
+        setTimeout(showSlides, 10000); // Change slide every 10 seconds
+    }
+
+    document.addEventListener("DOMContentLoaded", showSlides);
+</script>
+</section>
+<div id="ttilte">
+<section class="trust">
+    <h1 class="tt" id="ttrust">Why our clients trust us</h1>
+    <md-block class="tp" id="tp">
+        At Party Time, trust in our clients is paramount. We value open communication, shared visions, and mutual respect,
+        fostering collaborative partnerships that result in uniquely crafted celebrations. This trust forms the cornerstone
+        of our commitment to delivering authentic and unforgettable experiences.
+    </md-block>
+    </div>
+    <div class="image-container">
+        <img  src="test.jpg" alt="Description of the image">
+        <ul class="text-list">
+            <!-- List with four text items -->
+            <li id="lis1"><md-block>**⊗ Open Communication:** Transparent dialogue ensures a shared vision for your celebration.</md-block></li>
+            <li id="lis2"><md-block>**⊗ Collaborative Partnerships:** We build trust through collaborative efforts, crafting exceptional and personalized events together.</md-block></li>
+            <li id="lis3"><md-block>**⊗ Mutual Respect:** Valuing your input, we recognize and respect the significance of your ideas.</md-block></li>
+            <li id="lis4"><md-block>**⊗ Authentic Experiences:** Trusting our clients allows us to create genuine, unforgettable moments tailored to your unique aspirations.</md-block></li>
+        </ul>
+    </div>
+</section>
+<section id="service">
+    <h1 id="services" class="tt">Our Services</h1>
+    <div class="serc">
+        <div class="serct">
+        <a href="#goldid"><li>Themed events</li></a>
+        <a href="#goldid"><li>Marquee parties</li></a>
+        <a href="#goldid"><li> Special celebrations </li></a>
+        <a href="#goldid"><li>Entertainment</li></a>
+    </div>
+        <div class="serct2">
+            <a href="#goldid"><li>Bespoke catering</li></a>
+            <a href="#goldid"><li>Themes and props</li></a>
+            <a href="#goldid"><li> Enhanced Personalization </li></a>
+            <a href="#goldid"><li>fundraisers</li></a>
+            </div>
+</div>
+    
+</section>
+<h1 id="services" class="tt">Our Packages</h1>
+<section id="Packs">
+    <div class="bronze">
+        <h1 class="bronzem">$<br>Bronze</h1><br>
+        <h1 class="bronzed">This is the simplest packages we have</h1><br>
+        <ul class="bronzet">
+            <li>Room decorations — balloons, banners</li>
+            <br>
+            <li>Table decorations — centerpieces, gifts</li>
+            <br>
+            <li>DJ Entertainment</li>
+            <br>
+            <li>Cold buffet</li>
+        </ul>
+        <button class="bronzeb">
+            <a href="2.html">Book Now</a>
+        </button>
+    </div>
+    <div class="gold" id="goldid">
+        <h1 class="goldm">$$$<br>GOLD</h1><br>
+        <h1 class="goldd"> all from Silver package plus</h1><br>
+        <ul class="goldt">
+            <li>Staff in attendance to ensure complete</li>
+            <br>
+            <li>Finding guest accommodation</li>
+            <br>
+            <li id="lnks">Live band entertainment and magician</li>
+            <br>
+            <li>Hot and Cold buffet and soft drinks</li>
+            <br>
+        </ul>
+        <button class="goldb">
+            <a href="2.html">Book Now</a>
+        </button>
+    </div>
+    <div class="silver">
+        <h1 class="silverm">$$<br>Silver</h1><br>
+        <h1 class="silverd"> all from Bronze package plus</h1><br>
+        <ul class="silvert">
+            <li>Invitation design and handling</li>
+            <br>
+            <li>Party cost clear up</li>
+            <br>
+            <li>Live band entertainment and magician</li>
+            <br>
+            <li>Cold buffet and soft drinks</li>
+            <br>
+        </ul>
+        <button class="silverb">
+            <a href="2.html">Book Now</a>
+        </button>
+    </div>
+</section>
+<section id="custom">
+    <div class="custom">
+        <div class="customy">
+            <h1 class="ct1">Custom</h1><br>
+            <h1 class="ct2">Packages</h1>
+            <h1 class="cd">
+                <br>By Clicking The contact us button you agree to our <u><a href="">terms and services</a></u>
+            </h1>
+            <button class="cb">
+                <a href="3.html">Contact Us</a>
+            </button>
+        </div>
+        <div class="customl">
+        <li>Tailored Services: Create a unique event by choosing elements that match your vision</li>
+        <br>
+        <li>Budget-Friendly Options: Customize your package to control costs and maximize value.</li>
+        <br>
+        <li>Enhanced Personalization: Infuse your personality into every aspect of the event</li>
+        <br>
+        <li>Scalability: Adjust your package for events of any size.</li>
+        <br>
+        <li>Adaptability to Trends: Stay current by integrating the latest trends seamlessly.</li>
+        <br>
+        </div>
+</div>
+</section>
+<footer>
+    <div class="footer">
+    <div class="row">
+    <a href="#"><i class="fa fa-facebook"></i></a>
+    <a href="#"><i class="fa fa-instagram"></i></a>
+    <a href="#"><i class="fa fa-youtube"></i></a>
+    <a href="#"><i class="fa fa-twitter"></i></a>
+    </div>
+    
+    <div class="row">
+    <ul>
+    <li><a href="#ttilte">Why our clients trust us</a></li>
+    <li><a href="#service">Our Services</a></li>
+    <li><a href="#Packs">Our Packages</a></li>
+    </ul>
+    </div>
+    
+    <div class="row">
+    All rights reserved || Designed By: nV22084 
+    </div>
+    </div>
+    </footer>
+</body>
+</html>
+    </div>
+</section>
+</body>
+</html>
