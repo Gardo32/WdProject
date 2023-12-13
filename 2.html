@@ -3,56 +3,103 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Booking System</title>
     <link rel="stylesheet" href="styles.css">
+    <title>Contact Form</title>
 </head>
-<h1>Booking System</h1>
-<div class="wpcf7" id="wpcf7-f156-p143-o1 formwrap">
-    <form action="index.html" method="post" class="wpcf7-form" novalidate="novalidate">
-        <div style="display: none;">
-            <input type="hidden" name="_wpcf7" value="156">
-            <input type="hidden" name="_wpcf7_version" value="3.7.2">
-            <input type="hidden" name="_wpcf7_locale" value="en_US">
-            <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f156-p143-o1">
-            <input type="hidden" name="_wpnonce" value="d1da331d93">
+<body>
+
+<div class="container">
+    <h2>Contact Us</h2>
+    <form action="#" method="post" id="contact-form">
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
         </div>
-        <p>
-           <span class="wpcf7-form-control-wrap Name">
-             <input type="text" name="Name" value="" size="40" class="nameinput wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name">
-          </span>
-          <span class="wpcf7-form-control-wrap Email">
-            <input type="email" name="Email"  size="40" class="emailinput wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="Email">
-          </span>
-          <span class="wpcf7-form-control-wrap Subject flat">
-            <select name="Subject" class="indent wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
-              <option value="none">Select Your Plan</option>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label for="phone">Phone:</label>
+            <input type="tel" id="phone" name="phone" required>
+        </div>
+        <div class="form-group">
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+        </div>
+        <div class="form-group">
+            <label for="dropdown">Select Your Package:</label>
+            <select id="dropdown" name="dropdown" required>
+              <option value="none">Select Your Package</option>
               <option value="bronze">Bronze</option>
               <option value="silver">Silver</option>
               <option value="gold">Gold</option>
               <option value="custom">Custom</option>
             </select>
-            <select name="Subject" class="indent wpcf7-form-control wpcf7-select wpcf7-validates-as-required" aria-required="true" aria-invalid="false">
-              <option value="none">Select Your service</option>
-              <option value="Themed">Themed events</option>
-              <option value="Marquee">Marquee parties</option>
-              <option value="Special">Special celebrations</option>
-              <option value="Entertainment">Entertainment</option>
-              <option value="fundraisers">fundraisers</option>
-              <option value="bespoke">bespoke catering</option>
-              <option value="themes">themes and props</option>
-              <option value="sound">sound and lighting</option>
-            </select>
-          </span>
-          <span class="wpcf7-form-control-wrap Message">
-            <textarea name="Message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea" aria-invalid="false" placeholder="Message"></textarea>
-          </span>
-          <input type="submit" value="Send" class="wpcf7-form-control wpcf7-submit btn" onclick="return confirm('Are you sure you want to submit?')">
-          <img class="ajax-loader" src="http://www.jordancundiff.com/wp-content/plugins/contact-form-7/images/ajax-loader.gif" alt="Sending ..." style="visibility: hidden;">
-      </p>
-      <div class="wpcf7-response-output wpcf7-display-none">
-      </div>
-  </form>
+            <div class="form-group">
+              <label for="dropdown">Select Your Service:</label>
+              <select id="dropdown" name="dropdown" required>
+                <option value="none">Select Your Service</option>
+                <option value="Themed">Themed Events</option>
+                <option value="Marquee">Marquee Parties</option>
+                <option value="Special">Special Celebrations</option>
+                <option value="Entertainment">Entertainment</option>
+                <option value="fundraisers">Fundraisers</option>
+                <option value="bespoke">Bespoke Catering</option>
+                <option value="themes">Themes and Props</option>
+                <option value="sound">Sound and Lighting</option>
+                <option value="sound">Other</option>
+              </select>
+        </div>
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+            <label for="map">Location on Map:</label>
+            <div id="map"></div>
+        </div>
+        <button onclick="confirmAndRedirect()">Click me</button>
+    </form>
 </div>
-<body>
+
+<script src="https://www.bing.com/api/maps/mapcontrol?key=AggkquNnnifc7iKAoxwXHugcB9Mn_4C62NW3uCYJkidLNJG-i7AKGt2a6JZ3fj26&callback=initMap" async defer></script>
+<script>
+    function initMap() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                function (position) {
+                    var userLocation = new Microsoft.Maps.Location(position.coords.latitude, position.coords.longitude);
+                    var map = new Microsoft.Maps.Map(document.getElementById('map'), {
+                        center: userLocation,
+                        zoom: 14
+                    });
+
+                    // Add a pushpin for the user's location
+                    var pushpin = new Microsoft.Maps.Pushpin(userLocation);
+                    map.entities.push(pushpin);
+                },
+                function (error) {
+                    console.error('Error getting user location:', error.message);
+                    // Handle error, for example, show a default map or ask the user to input their location manually.
+                }
+            );
+        } else {
+            console.error('Geolocation is not supported by this browser.');
+            // Handle lack of geolocation support, for example, show a default map or ask the user to input their location manually.
+        }
+    }
+</script>
+<script>
+  function confirmAndRedirect() {
+      // Display a confirmation dialog
+      var isConfirmed = confirm("Are you sure you want to proceed?");
+
+      // If the user clicks "OK" in the confirmation dialog, redirect to another website
+      if (isConfirmed) {
+          window.location.href = "https://gardo32.github.io/WdProject/"; // Replace with the desired URL
+      }
+  }
+</script>
 </body>
 </html>
