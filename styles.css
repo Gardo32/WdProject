@@ -1,3 +1,17 @@
+/**
+ * Github: https://github.com/Gardo32/WdProject
+ * 
+ * This CSS file contains styles for a web page layout.
+ * It sets the font family, margin, padding, and background image for the body element.
+ * The container class defines the maximum width, margin, background color, padding, border radius, and box shadow for a container element.
+ * The h2 element is centered and has a specific color.
+ * The form element is displayed as a grid with a gap between grid items.
+ * The form-group class is displayed as a grid with a smaller gap between grid items.
+ * The label element has a bold font weight.
+ * The input, select, and textarea elements have a width of 100% and padding.
+ * The button element has a width of 100%, padding, background color, text color, border, border radius, and cursor style.
+ * The map element has a fixed height of 200px.
+ */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
